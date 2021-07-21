@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>Co.</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <header>
+      <ul class="inner">
+        <li>Top</li>
+        <li>Schedule</li>
+        <li>MyPage</li>
+        <li><%= link_to "SignUp", new_member_registration_path %></li>
+        <li><%= link_to "Login", new_member_session_path %></li>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
