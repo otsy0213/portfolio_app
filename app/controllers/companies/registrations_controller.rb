@@ -4,27 +4,27 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
 
-  GET /companies/sign_up
+  # GET /companies/sign_up
   def new
-    super
+    @company = Company.new
   end
 
-  POST /companies
+  # POST /companies
   def create
     super
   end
 
-  # GET /resource/edit
+  # GET /companies/edit
   # def edit
   #   super
   # end
 
-  # PUT /resource
+  # PUT /companies
   # def update
   #   super
   # end
 
-  # DELETE /resource
+  # DELETE /companies
   # def destroy
   #   super
   # end
@@ -38,11 +38,11 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  protected
+  # protected
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:company_name, :email])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:company_name])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -51,12 +51,12 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  def after_sign_up_path_for(resource)
+  def after_sign_up_path_for(resources)
     new_member_registration_path
   end
 
   # The path used after sign up for inactive accounts.
-  def after_inactive_sign_up_path_for(resource)
+  def after_inactive_sign_up_path_for
     new_member_registration_path
   end
 end

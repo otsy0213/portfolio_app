@@ -1,0 +1,26 @@
+<h2>新規アポ登録</h2>
+<%= form_with model: @apo do |f| %>
+  <div>
+    <%= f.label :name, "顧客名" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :date, "訪問日時" %>
+    <%= f.datetime_field :date %>
+  </div>
+  <div>
+    <%= f.label :address, "住所" %>
+    <%= f.text_field :address %>
+  </div>
+  <div>
+    <%= f.label :content, "アポ内容" %>
+    <%= f.text_field :content %>
+  </div>
+  <div>
+    <%= f.label :memo, "備考" %>
+    <%= f.text_field :memo %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

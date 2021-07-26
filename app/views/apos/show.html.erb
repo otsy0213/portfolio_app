@@ -1,0 +1,10 @@
+<div>
+  <h2>アポ詳細</h2>
+</div>
+<%= @apo.name %>
+<%= @apo.date %>
+<%= @apo.address %>
+<%= @apo.content %>
+<%= @apo.memo %>
+<%= link_to "編集", edit_apo_path(@apo.id), class: "link" %>
+<%= link_to "削除", apo_path(@apo.id), method: :delete, class: "link" %>

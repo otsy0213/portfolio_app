@@ -1,0 +1,27 @@
+<div>
+  <h2>アポ一覧</h2>
+</div>
+<div>
+  <table>
+    <% @apos.each do |apo| %>
+      <tr bgcolor="lightgray">
+        <td><%= apo.name %></td>
+      </tr>
+      <tr>
+        <td><%= apo.date %></td>
+      </tr>
+      <tr bgcolor="lightgray">
+        <td><%= apo.address %></td>
+      </tr>
+      <tr>
+        <td><%= apo.content %></td>
+      </tr>
+      <tr bgcolor="lightgray">
+        <td><%= apo.memo %></td>
+      <tr>
+      <tr>
+        <td><%= link_to "見る", apo_path(apo.id), class: "link" %></td>
+      <tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+<div>
+  <h2>メンバー詳細</h2>
+</div>
+<div>
+  <table>
+    <tr bgcolor="lightgray">
+      <td><%= @member.id %></td>
+    </tr>
+    <tr>
+      <td><%= @member.name %></td>
+    </tr>
+    <tr bgcolor="lightgray">
+      <td><%= @member.image %></td>
+    </tr>
+    <tr>
+      <td><%= @member.status %></td>
+    </tr>
+    <tr>
+      <td><%= link_to "見る", apo_path(apo.id), class: "link" %></td>
+    <tr>
+  </table>
+</div>
