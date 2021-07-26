@@ -16,10 +16,10 @@
         <li>Top</li>
         <% if %>
           <li>Schedule</li>
-          <li><%= link_to "Mypage", members_show_path, class: "link" %></li>
-          <li><%= link_to "Logout", destroy_member_session_path, method: :delete, class: "link" %></li>
-          <li><%= link_to "SignUp", new_member_registration_path, class: "link" %></li>
-          <li><%= link_to "Login", new_member_session_path, class: "link" %></li>
+          <li><%= link_to "Mypage", class: "link" %></li>
+          <li><%= link_to "Logout", method: :delete, class: "link" %></li>
+          <li><%= link_to "SignUp", class: "link" %></li>
+          <li><%= link_to "Login", class: "link" %></li>
         <% end %>
       </ul>
     </header>
