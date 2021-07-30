@@ -26,7 +26,7 @@ class AposController < ApplicationController
     if Apo.update(apo_params)
       redirect_to apo_path
     else
-      render 'edit'
+      render action: :edit
     end
   end
 

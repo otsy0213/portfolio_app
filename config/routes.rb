@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  get 'members/show', to: 'members#show'
+
+  resources :companies
+  resources :members
   resources :apos
+
+  get    '/login',   to: 'member_sessions#new'
+  post   '/login',   to: 'member_sessions#create'
+  delete '/logout',  to: 'member_sessions#destroy'
 end

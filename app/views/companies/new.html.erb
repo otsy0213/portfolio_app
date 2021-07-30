@@ -1,0 +1,15 @@
+<h2>登録フォーム</h2>
+<%= form_with model: @company do |f| %>
+  <div>
+    <%= f.text_field :company_name, placeholder: "CompanyName" %>
+  </div>
+  <div>
+    <%= f.password_field :date, placeholder: "password" %>
+  </div>
+  <div>
+    <%= f.password_field :password_confirmation, placeholder: "password(confirm)" %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<h2>ログイン</h2>
+<%= form_with scope: :session, url: login_path, local: true do |f| %>
+  <div>
+    <%= f.label :name, "氏名" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :password, "パスワード" %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation, "パスワード確認" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%= f.submit "Login" %>
+  </div>
+<% end %>

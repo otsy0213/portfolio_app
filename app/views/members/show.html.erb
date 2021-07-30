@@ -4,19 +4,22 @@
 <div>
   <table>
     <tr bgcolor="lightgray">
-      <td><%= @member.id %></td>
+      <td>id:</td><td><%= @member.id %></td>
     </tr>
     <tr>
-      <td><%= @member.name %></td>
+      <td>image:</td><td><%= @member.image %></td>
     </tr>
     <tr bgcolor="lightgray">
-      <td><%= @member.image %></td>
+      <td>name:</td><td><%= @member.name %></td>
     </tr>
     <tr>
-      <td><%= @member.status %></td>
+      <td>department:</td><td><%= @member.department %></td>
+    </tr>
+    <tr bgcolor="lightgray">
+      <td>status:</td><td><%= @member.status %></td>
     </tr>
     <tr>
-      <td><%= link_to "見る", apo_path(apo.id), class: "link" %></td>
+      <td><%= link_to "編集", edit_member_path, class: "link" %></td>
     <tr>
   </table>
 </div>
