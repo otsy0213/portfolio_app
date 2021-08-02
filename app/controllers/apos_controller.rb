@@ -38,7 +38,7 @@ class AposController < ApplicationController
   
   private
   def apo_params
-    params.require(:apo).permit(:name, :date, :address, :content, :memo)
+    params.require(:apo).permit(:name, :start_time, :address, :content, :memo)
   end
 
   def set_apo_params

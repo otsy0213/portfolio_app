@@ -1,27 +1,14 @@
 <div>
-  <h2>アポ一覧</h2>
+  <h4>All of Schegule</h4>
 </div>
 <div>
-  <table>
-    <% @apos.each do |apo| %>
-      <tr bgcolor="lightgray">
-        <td><%= apo.name %></td>
-      </tr>
-      <tr>
-        <td><%= apo.date %></td>
-      </tr>
-      <tr bgcolor="lightgray">
-        <td><%= apo.address %></td>
-      </tr>
-      <tr>
-        <td><%= apo.content %></td>
-      </tr>
-      <tr bgcolor="lightgray">
-        <td><%= apo.memo %></td>
-      <tr>
-      <tr>
-        <td><%= link_to "見る", apo_path(apo.id), class: "link" %></td>
-      <tr>
-    <% end %>
-  </table>
+  <%= link_to "NewSchegule", new_apo_path %>
 </div>
+<%= week_calendar(number_of_weeks: 2, events: @apos) do |date, apos| %>
+  <%= date %>
+    <% apos.each do |apo| %>
+      <div>
+        <%= link_to "#{apo.name}", apo_path(apo.id) %>
+      </div>
+    <% end %>
+<% end %>

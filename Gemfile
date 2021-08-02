@@ -46,6 +46,7 @@ group :development do
   gem 'bootstrap', '~> 4.2'
   gem 'jquery-rails'
   gem 'pry-rails'
+  gem 'simple_calendar'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_033440) do
+ActiveRecord::Schema.define(version: 2021_08_01_050325) do
 
   create_table "apos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
-    t.datetime "date"
+    t.datetime "start_time"
     t.string "address"
     t.string "content"
     t.string "memo"
